@@ -27,7 +27,7 @@ Let's get you started on setting up SST Simulator.
                   export PATH=$SST_CORE_HOME/bin:$PATH
                   
 5. Let's configure the SST core. An example of the command line is 
-                  "./configure --prefix=$HOME/scratch/src/sstcore-11.1.0 CC=\`which gcc\` CXX=\`which g++\` MPICC=`which mpicc` MPICXX=`which mpicxx`"                  
+                  "./configure --prefix=$HOME/scratch/src/sstcore-11.1.0 CC=\`which gcc\` CXX=\`which g++\` MPICC=\`which mpicc\` MPICXX=\`which mpicxx\`"                  
 
 When the configuration is done successfully , it prompts the following:
 ![image](https://user-images.githubusercontent.com/93614048/206943147-f1f1649d-7b98-4e28-834d-520e30732cd3.png)
@@ -38,7 +38,13 @@ When the configuration is done successfully , it prompts the following:
                   
 7. Let's repeat steps 4-6 for sst elements as well
                   export SST_ELEMENTS_HOME=$HOME/local/sstelements-11.1.0
-                  export SST_ELEMENTS_ROOT=$HOME/scratch/src/sst-elements-library-11.1.0                  
+                  export SST_ELEMENTS_ROOT=$HOME/scratch/src/sst-elements-library-11.1.0     
+                  "./configure --prefix=$HOME/scratch/src/sst-elements-library-11.1.0 CC=\`which gcc\` CXX=\`which g++\` MPICC=\`which mpicc\` MPICXX=\`which mpicxx\`"   
+
+![image](https://user-images.githubusercontent.com/93614048/206944679-f1f499e9-2db6-49b0-a09e-8ae8a0058489.png)
+
+I have shared all the configuration snapshots above for reference of the run performed on my system.
+
 
 Step B:
 Let's get you set up for using rev cores by Tactical Computing Labs!
