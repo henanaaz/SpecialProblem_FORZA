@@ -9,41 +9,45 @@ Let's get you started on setting up SST Simulator.
 2. Download the simulator core, element and macro using the page "https://sst-simulator.org/SSTPages/SSTMainDownloads/" inside the src directory
 3. Make sure OpenMPI is installed
                   # OPENMPI SET UP
-                  export MPIHOME=$HOME/local/packages/OpenMPI-4.0.5
-                  export PATH=$MPIHOME/bin:$PATH
-                  export MPICC=mpicc
-                  export MPICXX=mpicxx
-
-                  export PMIX_MCA_gds=hash
-
-                  export LD_LIBRARY_PATH=$MPIHOME/lib:$LD_LIBRARY_PATH
-                  export DYLD_LIBRARY_PATH=$MPIHOME/lib:$DYLD_LIBRARY_PATH
-                  export MANPATH=$MPIHOME/share/man:$DYLD_LIBRARY_PATH
+                  >export MPIHOME=$HOME/local/packages/OpenMPI-4.0.5
+                  >export PATH=$MPIHOME/bin:$PATH
+                  >export MPICC=mpicc
+                  >export MPICXX=mpicxx
+                  >export PMIX_MCA_gds=hash
+                  >export LD_LIBRARY_PATH=$MPIHOME/lib:$LD_LIBRARY_PATH
+                  >export DYLD_LIBRARY_PATH=$MPIHOME/lib:$DYLD_LIBRARY_PATH
+                  >export MANPATH=$MPIHOME/share/man:$DYLD_LIBRARY_PATH
 
 4. Let's set you up for SST core now:
                   #SSTCORE SET UP
-                  export SST_CORE_HOME=$HOME/local/sstcore-11.1.0
-                  export SST_CORE_ROOT=$HOME/scratch/src/sstcore-11.1.0
-                  export PATH=$SST_CORE_HOME/bin:$PATH
+                  >export SST_CORE_HOME=$HOME/local/sstcore-11.1.0
+                  >export SST_CORE_ROOT=$HOME/scratch/src/sstcore-11.1.0
+                  >export PATH=$SST_CORE_HOME/bin:$PATH
                   
 5. Let's configure the SST core. An example of the command line is 
-                  "./configure --prefix=$HOME/scratch/src/sstcore-11.1.0 CC=\`which gcc\` CXX=\`which g++\` MPICC=\`which mpicc\` MPICXX=\`which mpicxx\`"                  
+                  >./configure --prefix=$HOME/scratch/src/sstcore-11.1.0 CC=\`which gcc\` CXX=\`which g++\` MPICC=\`which mpicc\` MPICXX=\`which mpicxx\`
 
 When the configuration is done successfully , it prompts the following:
 ![image](https://user-images.githubusercontent.com/93614048/206943147-f1f1649d-7b98-4e28-834d-520e30732cd3.png)
 
 6. Inside the sstcore-11.1.0 directory (make use of the relevant directory structure), perform following steps to build the sst-core
-                  make
-                  make install
+                  >make
+                  >make install
                   
 7. Let's repeat steps 4-6 for sst elements as well
-                  export SST_ELEMENTS_HOME=$HOME/local/sstelements-11.1.0
-                  export SST_ELEMENTS_ROOT=$HOME/scratch/src/sst-elements-library-11.1.0     
-                  "./configure --prefix=$HOME/scratch/src/sst-elements-library-11.1.0 CC=\`which gcc\` CXX=\`which g++\` MPICC=\`which mpicc\` MPICXX=\`which mpicxx\`"   
+                  >export SST_ELEMENTS_HOME=$HOME/local/sstelements-11.1.0
+                  >export SST_ELEMENTS_ROOT=$HOME/scratch/src/sst-elements-library-11.1.0     
+                  >./configure --prefix=$HOME/scratch/src/sst-elements-library-11.1.0 CC=\`which gcc\` CXX=\`which g++\` MPICC=\`which mpicc\` MPICXX=\`which mpicxx\`
 
 ![image](https://user-images.githubusercontent.com/93614048/206944679-f1f499e9-2db6-49b0-a09e-8ae8a0058489.png)
 
-I have shared all the configuration snapshots above for reference of the run performed on my system.
+8. Check to make sure the build and configuration was done correctly:
+                  >sst-test-core
+                  >
+![image](https://user-images.githubusercontent.com/93614048/206945880-79058ae5-ea84-40ee-bb14-dabe9a2d8ef4.png)
+
+        
+Note: I have shared all the configuration snapshots above for reference of the run performed on my system.
 
 
 Step B:
