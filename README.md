@@ -3,7 +3,7 @@ ECE8903 for Special Problem with Professor A Daglis
 
 This documents lists the steps involved to get to going on the project.
 
-Step A
+Step A:
 Let's get you started on setting up SST Simulator.
 1. On your system, create a directory structure "scratch/src" for all your set up files
 2. Download the simulator core, element and macro using the page "https://sst-simulator.org/SSTPages/SSTMainDownloads/" inside the src directory
@@ -32,6 +32,13 @@ Let's get you started on setting up SST Simulator.
 When the configuration is done successfully , it prompts the following:
 ![image](https://user-images.githubusercontent.com/93614048/206943147-f1f1649d-7b98-4e28-834d-520e30732cd3.png)
 
+6. Inside the sstcore-11.1.0 directory (make use of the relevant directory structure), perform following steps to build the sst-core
+                  make
+                  make install
+                  
+7. Let's repeat steps 4-6 for sst elements as well
+                  export SST_ELEMENTS_HOME=$HOME/local/sstelements-11.1.0
+                  export SST_ELEMENTS_ROOT=$HOME/scratch/src/sst-elements-library-11.1.0                  
 
-
-6.                
+Step B:
+Let's get you set up for using rev cores by Tactical Computing Labs!
