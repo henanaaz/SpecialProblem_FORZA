@@ -27,7 +27,7 @@ Let's get you started on setting up SST Simulator.
                   export PATH=$SST_CORE_HOME/bin:$PATH
                   
 5. Let's configure the SST core. An example of the command line is 
-                  "./configure --prefix=$HOME/scratch/src/sstcore-11.1.0 CC=`which gcc` CXX=`which g++` MPICC=`which mpicc` MPICXX=`which mpicxx`"                  
+                  "./configure --prefix=$HOME/scratch/src/sstcore-11.1.0 CC=\`which gcc\` CXX=\`which g++\` MPICC=`which mpicc` MPICXX=`which mpicxx`"                  
 
 When the configuration is done successfully , it prompts the following:
 ![image](https://user-images.githubusercontent.com/93614048/206943147-f1f1649d-7b98-4e28-834d-520e30732cd3.png)
