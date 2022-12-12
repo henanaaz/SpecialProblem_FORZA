@@ -37,9 +37,15 @@ When the configuration is done successfully , it prompts the following:
 7. Let's repeat steps 4-6 for sst elements as well
                   >export SST_ELEMENTS_HOME=$HOME/local/sstelements-11.1.0
                   >export SST_ELEMENTS_ROOT=$HOME/scratch/src/sst-elements-library-11.1.0     
-                  >./configure --prefix=$HOME/scratch/src/sst-elements-library-11.1.0 CC=\`which gcc\` CXX=\`which g++\` MPICC=\`which mpicc\` MPICXX=\`which mpicxx\`
+                  >./configure --prefix=$HOME/scratch/src/sst-elements-library-11.1.0 --with-sst-core=$HOME/scratch/src/sstcore-11.1.0
+                  > make
+                  > make install
+                
+![image](https://user-images.githubusercontent.com/93614048/206946638-78507c8e-8375-41d6-9f38-ec0ce259fbbe.png)
 
-![image](https://user-images.githubusercontent.com/93614048/206944679-f1f499e9-2db6-49b0-a09e-8ae8a0058489.png)
+The following elements where configured and built in this process:
+![image](https://user-images.githubusercontent.com/93614048/206946767-3c9acc71-29c4-4491-b03b-afea0eb8d7ae.png)
+
 
 8. Check to make sure the build and configuration was done correctly:
                   >sst-test-core
