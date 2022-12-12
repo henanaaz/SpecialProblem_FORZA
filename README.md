@@ -60,3 +60,5 @@ Step B:
 Let's get you set up for using rev cores by Tactical Computing Labs!
 
 Refer to the page : https://github.com/tactcomplabs/rev 
+1. >git clone https://github.com/tactcomplabs/rev.git
+2. >cd rev ; make ; make install
