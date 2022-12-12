@@ -58,3 +58,5 @@ Note: I have shared all the configuration snapshots above for reference of the r
 
 Step B:
 Let's get you set up for using rev cores by Tactical Computing Labs!
+
+Refer to the page : https://github.com/tactcomplabs/rev 
